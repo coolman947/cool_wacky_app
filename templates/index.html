@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Wacky App</title>
+</head>
+<body>
+    <h1>Upload an STL or Image File</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".stl,.jpg,.png">
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if request.args.filename %}
+    <script>
+        const filename = "{{ request.args.filename }}";
+        console.log("Uploaded file:", filename);
+        // Optionally: You could send this to Pygame or handle it as needed
+    </script>
+    {% endif %}
+</body>
+</html>
+
