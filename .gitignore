@@ -1,9 +1,9 @@
+# Ignore the virtual environment folder
+venv/
+
 # Ignore Python compiled files
 __pycache__/
 *.pyc
-
-# Ignore uploads and static files
-static/uploads/
 
 # Ignore system files
 .DS_Store
